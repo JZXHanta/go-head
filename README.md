@@ -7,10 +7,10 @@
   - example: ```go-head example.txt``` 
 
 - If ran with the argument '-' and no file-name it will read the first 10 lines of the stardard input
-  - example: ```cat test.txt | go-head -```
+  - example: ```cat example.txt | go-head -```
 
 - If ran with argument '-n' followed by a number it will return the specified number of lines from the beginning of the input
-  - example: ```go-head -n 30 test.txt```
+  - example: ```go-head -n 30 example.txt```
 
 - Arguments can be used in conjuntion
-  - example: ```cat test.txt | go-head -n 30 -```
+  - example: ```cat example.txt | go-head -n 30 - example2.txt```
