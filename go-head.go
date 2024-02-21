@@ -54,6 +54,11 @@ func main() {
 		log.Fatal("Not enough arguments: expected at least one argument, recieved 0")
 	}
 
+	if args[0] == "-h" || args[0] == "--help" {
+		fmt.Print(manPage)
+		os.Exit(0)
+	}
+
 	if args[0] == "-n" {
 		l, err := strconv.Atoi(args[1])
 		if err != nil {
@@ -75,5 +80,6 @@ func main() {
 		}
 
 	}
+	os.Exit(0)
 
 }

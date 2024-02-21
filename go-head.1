@@ -1,0 +1,32 @@
+NAME
+		head -- display first lines of a file
+
+SYNOPSIS
+		head [-n count]	[file ...]
+
+DESCRIPTION
+		This filter displays the first count line of each of the
+		specified files, or of the standard input if no files are specified.
+		If count is omitted it defaults to 10.
+
+		The following options are available:
+
+		-n count, --lines=count		Print count lines of each of the specified files.
+		
+EXIT STATUS
+		The go-cat utility exits 0 on success, and >0 if an error occurs.
+		
+EXAMPLES
+		The command:
+
+			go-head file1
+
+		will print the first 10 lines of file1 to the standard output.
+
+		The command:
+
+			go-head -n 20 file1 file2 > file3
+
+		will sequentially print the first 20 lines of file1 and file2 to the file
+		file3, truncating file3 if it already exists.  See the manual page for
+		your shell (e.g., sh(1)) for more information on redirection.
